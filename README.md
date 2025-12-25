@@ -16,7 +16,7 @@
 * A **variable** is a named storage location in memory used to store data.
 * It allows you to reference and manipulate values easily throughout your code.
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ---
 
@@ -25,8 +25,8 @@
 * Every piece of data in JavaScript has a **type**, which defines how it behaves and what operations can be performed on it.
 * Common types: Number, String, Boolean, Undefined, Null, Object, Symbol.
 
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
 
 ---
 
@@ -35,7 +35,7 @@
 * Numbers are used for arithmetic operations, calculations, and representing numerical values.
 * JavaScript supports integers, floats, and special numeric values like Infinity and NaN.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 ---
 
@@ -44,7 +44,7 @@
 * Operations allow you to perform calculations or manipulate values.
 * Examples: addition (+), subtraction (-), multiplication (*), division (/), modulus (%).
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 ---
 
@@ -53,7 +53,7 @@
 * **NaN** stands for Not-a-Number and represents an invalid numerical operation.
 * Useful to detect errors in arithmetic computations.
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 ---
 
@@ -62,7 +62,7 @@
 * Determines the order in which operators are evaluated in an expression.
 * Important to understand to avoid unexpected results in calculations.
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 ---
 
@@ -70,7 +70,7 @@
 
 * Practice applying different operations, variables, and types to strengthen understanding.
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 ---
 
@@ -78,7 +78,7 @@
 
 * Assignment operators assign values to variables and can combine arithmetic operations, e.g., `+=`, `-=`, `*=`, `/=`.
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 ---
 
@@ -87,7 +87,7 @@
 * Unary operators act on a single operand.
 * Examples: Increment (++), Decrement (--), Logical NOT (!).
 
-![alt text](image-10.png)
+![alt text](images/image-10.png)
 
 ---
 
@@ -96,7 +96,7 @@
 * **Pre-increment (`++x`)**: Increments the value before using it in an expression.
 * **Post-increment (`x++`)**: Uses the current value first, then increments.
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 ---
 
@@ -104,7 +104,7 @@
 
 * Reinforce understanding of operators, arithmetic, and increment/decrement operations.
 
-![alt text](image-12.png)
+![alt text](images/image-12.png)
 
 ---
 
@@ -113,14 +113,14 @@
 * Identifiers are names used for variables, functions, and classes.
 * Must start with a letter, `_`, or `$`; cannot be a reserved keyword.
 
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 ## Writing of Identifiers
 
 * Use descriptive names to make your code readable and maintainable.
 * Follow camelCase convention for variables and functions.
 
-![alt text](image-14.png)
+![alt text](images/image-14.png)
 
 ---
 
@@ -129,7 +129,7 @@
 * Boolean values represent **true** or **false**.
 * Often used in conditional statements and logic operations.
 
-![alt text](image-15.png)
+![alt text](images/image-15.png)
 
 ---
 
@@ -138,7 +138,7 @@
 * A superset of JavaScript that adds **static typing**.
 * Helps detect errors early and improves code maintainability.
 
-![alt text](image-16.png)
+![alt text](images/image-16.png)
 
 ---
 
@@ -146,7 +146,7 @@
 
 * Exercises to apply Booleans, conditions, and TypeScript basics.
 
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 ---
 
@@ -155,7 +155,7 @@
 * Strings are sequences of characters used to represent text.
 * Strings can be manipulated, concatenated, and accessed using indices.
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 ---
 
@@ -164,7 +164,7 @@
 * Access individual characters using index notation: `string[index]`.
 * Use `string.length` to get the number of characters.
 
-![alt text](image-22.png)
+![alt text](images/image-22.png)
 
 ---
 
@@ -172,7 +172,7 @@
 
 * Combine strings using the `+` operator or template literals for dynamic text.
 
-![alt text](image-23.png)
+![alt text](images/image-23.png)
 
 ---
 
@@ -181,7 +181,7 @@
 * **Undefined**: Variable declared but not assigned.
 * **Null**: Represents the intentional absence of a value.
 
-![alt text](image-24.png)
+![alt text](images/image-24.png)
 
 ---
 
@@ -189,7 +189,6 @@
 
 * Apply knowledge of strings, Booleans, null/undefined, and other types to solve exercises.
 
-![alt text](image-25.png)
+![alt text](images/image-25.png)
 
 ---
-
