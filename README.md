@@ -4,6 +4,7 @@
 
 ---
 
+## Js Part-1:
 ## 🖥 Using Console
 
 * **REPL** - Read, Evaluate, Print, Loop: A simple way to quickly test and debug JavaScript code directly in the console.
