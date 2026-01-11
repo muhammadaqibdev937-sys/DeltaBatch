@@ -193,3 +193,80 @@
 ![alt text](images/image-25.png)
 
 ---
+
+
+
+# React Basics – First Project 🚀
+
+Simple starter React project to learn and understand the very basics.
+
+Created with **Vite + React**  
+Perfect for absolute beginners!
+
+---
+
+## 📋 What You'll Learn Here
+
+- How to create a React project with Vite  
+- Project folder structure  
+- Creating & using components  
+- Import / Export in React  
+- Basic JSX rules & writing HTML in JS  
+- Using curly braces `{}` for JavaScript inside JSX
+
+---
+
+## ⚡ Quick Start
+
+```bash
+# 1. Create new project
+npm create vite@latest react-basics -- --template react
+
+# 2. Enter project folder
+cd react-basics
+
+# 3. Install dependencies
+npm install
+
+# 4. Start development server
+npm run dev
+
+
+### 📂 Project Structure (most important files)
+
+react-basics/
+├── public/                 # static files (images, favicon...)
+│   └── vite.svg
+├── src/
+│   ├── assets/             # your images usually go here
+│   ├── components/         # ← put your components here (good habit)
+│   │   └── Footer.jsx
+│   ├── App.jsx             # main component
+│   ├── main.jsx            # entry point (renders App)
+│   ├── App.css
+│   └── index.css           # global styles
+├── index.html              # main HTML file
+├── package.json
+└── README.md             
+
+🏗️ Your First Component Example:
+// src/components/Footer.jsx
+function Footer() {
+  return (
+      <p>Made with ❤️ in Karachi</p>
+  )
+}
+
+export default Footer
+
+### Import/Export:
+![alt text](images/importexport.png)
+
+### Writing Markup in JSX ✍️
+![alt text](images/WritingMarkup.png)
+
+✨ Most Important JSX Rules (MUST REMEMBER!):
+--- 1. Use className instead of class
+--- 2.JavaScript goes inside curly braces
+--- 3.{/* Comments look like this
+--- 4. JavaScript goes inside curly braces
