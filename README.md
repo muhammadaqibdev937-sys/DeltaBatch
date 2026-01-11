@@ -183,7 +183,7 @@
 * **Null**: Represents the intentional absence of a value.
 
 ![alt text](images/image-24.png)
-![alt text](/images/WritingMarkup.png)
+
 ---
 
 ## ✏️ Practice Questions
@@ -259,14 +259,18 @@ function Footer() {
 
 export default Footer
 
+
+✨ Most Important JSX Rules (MUST REMEMBER!):
+ 1. Use className instead of class
+ 2.JavaScript goes inside curly braces
+ 3.{/* Comments look like this
+4. JavaScript goes inside curly braces
+
+---
+
 ### Import/Export:
-![Import Export](/images/importexport.png)
+![alt text](/images/WritingMarkup.png)
 
 ### Writing Markup in JSX ✍️
-![Writing Markup in JSX](/images/WritingMarkup.png)
-✨ Most Important JSX Rules (MUST REMEMBER!):
---- 1. Use className instead of class
---- 2.JavaScript goes inside curly braces
---- 3.{/* Comments look like this
---- 4. JavaScript goes inside curly braces
+![alt text](/images/WritingMarkup.png)
 
