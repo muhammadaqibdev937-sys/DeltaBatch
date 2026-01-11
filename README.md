@@ -292,7 +292,5 @@ export default App
 3. Comments in JSX → `{/* this is a comment */}`  
 4. Every tag must be closed (self-closing tags too → `<img />`)  
 5. Use **fragments** when no parent element is needed → `<></>`
-
 ---
-```
 
