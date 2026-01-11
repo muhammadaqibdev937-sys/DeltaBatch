@@ -294,6 +294,5 @@ export default App
 5. Use **fragments** when no parent element is needed → `<></>`
 
 ---
-
 ```
 
