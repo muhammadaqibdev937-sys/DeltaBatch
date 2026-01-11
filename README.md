@@ -260,10 +260,11 @@ function Footer() {
 export default Footer
 
 ### Import/Export:
-![alt text](images/importexport.png)
+![alt text](./images/importexport.png)
+DeltaBatch/images/importexport.png
 
 ### Writing Markup in JSX ✍️
-![alt text](images/WritingMarkup.png)
+![alt text](./images/WritingMarkup.png)
 
 ✨ Most Important JSX Rules (MUST REMEMBER!):
 --- 1. Use className instead of class
