@@ -294,3 +294,38 @@ export default App
 5. Use **fragments** when no parent element is needed → `<></>`
 ---
 
+
+### React Fragments
+
+In React, every component must return **one parent element**.  
+To satisfy this rule, we often wrap elements inside a `<div>`.
+
+However, extra `<div>` elements can create unnecessary nodes in the DOM.
+
+**React Fragments** solve this problem by letting you group elements **without adding extra HTML elements** to the DOM.
+
+#### Why Use React Fragments?
+- Avoid extra `<div>` wrappers
+- Keep the DOM clean
+- Improve readability and structure
+
+#### Two Ways to Use React Fragments
+
+**1. Full Syntax**
+```jsx
+<React.Fragment>
+  <h1>Hello</h1>
+  <p>Welcome to React</p>
+</React.Fragment>
+
+###Short Syntax (Recommended):
+<>
+  <h1>Hello</h1>
+  <p>Welcome to React</p>
+</>
+
+
+```
+### Jsx With Curly Braces:
+-- JSX, **curly braces `{}`** are used to write **JavaScript inside HTML-like code**.
+![alt text](./images/jsxbraces.png)

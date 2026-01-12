@@ -1,6 +1,7 @@
 import "./App.css";
 import  Tile  from "./tile.jsx";
 import { Devs } from "./dev.jsx";
+import React from "react";
 function FirstCompo(){
   return <h3>I am first compo</h3>;
 }
@@ -16,15 +17,24 @@ function Footer()
 }
 function App(){
 
+  // return (
+  // <React.Fragment>
+  // <FirstCompo/>
+  // <Desc/>
+  // <Footer/>
+  // <Tile/>
+  // <Devs/>
+  // </React.Fragment>
+  // );
   return (
-  <div>
-  <FirstCompo/>
-  <Desc/>
-  <Footer/>
-  <Tile/>
-  <Devs/>
-  </div>
-  );
+    <>
+    <FirstCompo/>
+    <Desc/>
+    <Footer/>
+    <Tile/>
+    <Devs/>
+    </>
+    );
 }
 
 export default App
