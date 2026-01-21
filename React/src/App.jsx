@@ -1,40 +1,20 @@
 import "./App.css";
-import  Tile  from "./tile.jsx";
-import { Devs } from "./dev.jsx";
 import React from "react";
-function FirstCompo(){
-  return <h3>I am first compo</h3>;
-}
+import { Props } from "./Prop/Prop.jsx";
 
-function Desc()
-{
-  return <p>i am dez</p>
-}
+function App() {
+  // let options = ["helloaqib", "hellosaqib", "hellosaim"];
+  // let opt = { a: "aqib" };
 
-function Footer()
-{
-  return <p>i am footer</p>
-}
-function App(){
-
-  // return (
-  // <React.Fragment>
-  // <FirstCompo/>
-  // <Desc/>
-  // <Footer/>
-  // <Tile/>
-  // <Devs/>
-  // </React.Fragment>
-  // );
   return (
     <>
-    <FirstCompo/>
-    <Desc/>
-    <Footer/>
-    <Tile/>
-    <Devs/>
+    {/* //direct pass inside it in array or object */}
+      {/* <Props title="ludo" price={30000} features={options} opt={opt} /> */}
+      <Props title="ludo" price={30000} />
+      <Props title="udo" price={50000} />
+      <Props title="luo" price={3000} />
     </>
-    );
+  );
 }
 
-export default App
+export default App;

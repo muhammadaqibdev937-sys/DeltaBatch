@@ -195,6 +195,27 @@
 ---
 
 
+### Console.log
+-- to print things in console
+
+### Linking Js File:
+-- with script tag
+
+### Template Literals:
+![alt text](images/template.png)
+
+### Operators in Js:
+![alt text](images/operators.png)
+
+### Comparison Operators:
+![alt text](images/compari.png)
+
+##  Comparison for non-numbers:
+![alt text](images/compainon.png)
+
+
+### If statement:
+![alt text](images/if.png)
 
 # React :🚀
 
@@ -329,3 +350,31 @@ However, extra `<div>` elements can create unnecessary nodes in the DOM.
 ### Jsx With Curly Braces:
 -- JSX, **curly braces `{}`** are used to write **JavaScript inside HTML-like code**.
 ![alt text](./images/jsxbraces.png)
+
+
+## Structuring Components
+
+Instead of rendering components multiple times again and again, a good practice is to **wrap related components inside a single parent component** and then render that parent component.
+
+This approach helps to:
+
+* Keep code clean and organized
+* Improve reusability
+* Make components easier to manage and maintain
+
+---
+
+## Styling Components
+
+To style a component, you can use **Pure CSS**, **Tailwind CSS**, or **any other styling library**.
+
+Steps to style a component:
+
+1. Import the CSS file or styling library.
+2. Use the required `className` or `id` on the component.
+3. Apply styles to the selected elements.
+
+This makes the UI consistent and easy to customize.
+
+### React Props:
+![alt text](./images/prop.png)
