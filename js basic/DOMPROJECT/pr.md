@@ -11,7 +11,7 @@
 
 
 
-## **1. Todo List App **
+## **1. Todo List App (Beginner → Intermediate)**
 
 **Concepts Covered:**
 
