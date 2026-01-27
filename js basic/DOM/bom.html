@@ -1,0 +1,81 @@
+<!-- BOM -->
+<!-- 1.location.href()  =========>to navigate through pages
+ 2.location.reload()
+ 3.history.back()
+ 4.history.forward()
+
+  NOTE:
+  history.back() and history.forward() are NOT used for pagination or navigation.
+  They only move through existing browser history and are unreliable.
+  On page reload, JS state is lost and history may not behave as expected.
+  Always use URL-based navigation (links or pushState) instead. -->
+
+<!-- ✅ Rule of thumb
+ 
+ History API (pushState + popstate) → correct for SPA pagination
+ history.back() / forward() → only convenience “Back / Forward” buttons -->
+
+ <!-- Local Storage :
+  browser storage like 5-10 mb
+  data is present in key-value pair
+  Exactly for user preferences, localStorage is usually the best choice
+  localStorage.getItem()
+  localStorage.setItem()
+  localStorage.removeItem()
+  localStorage.clear()
+    
+
+   local storage expect only string soo for dealings with object and array
+   we first covert into string using JSON.stringify(data parse) and we again covert it into back 
+   JSON.parse(data parse)
+
+
+
+  localStorage is per domain
+  Clearing localStorage (localStorage.clear()) only affects the current domain you are on
+  
+  Other websites/domains cannot be touched
+ -->
+
+  <!-- Session Storage : 
+     sessionStorage.getItem()
+     sessionStorage.setItem()
+     sessionStorage.removeItem()
+     sessionStorage.clear()
+    
+    
+  -->
+
+  <!-- cookie:
+   document.cookie = "username=Aqib"; // just saves a small piece of info
+   console.log(document.cookie); // shows all cookies as a string
+   document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+     name= → empty value
+      expires=... → past date deletes it
+   path=/ → deletes for the whole site
+   ✅ Remember: Add path=/ so cookie is available on the whole site.
+
+   you don’t have to put everything in one cookie.
+   You can create separate cookies for each piece of data:
+  
+   document.cookie = "name=Aqib; path=/";
+   document.cookie = "age=25; path=/";
+   document.cookie = "theme=dark; path=/";
+   
+  -->
+
+  <!-- mostly we use local storage not session and we use cookie through backend not frontend -->
+
+  <!-- classList:
+   selectedDocumentName.classList.add(className);
+   selectedDocumentName.classList.remove(className);
+   selectedDocumentName.classList.toggle(className);
+   selectedDocumentName.classList.contains(className);
+   body.classList.replace('light-theme', 'dark-theme');
+   add if not exist and remove if exist
+    -->
+   <!-- Project made light and dark theme:
+    Check → Apply saved theme on load.
+    Toggle → Save theme on button click.
+    set it in local storage -->
+  
