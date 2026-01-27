@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="relative min-h-screen flex items-center justify-center bg-black text-white">
+
+<div class="bg-gray-900 p-12 border-2 rounded-[10px] text-center">
+    <img src="profile.jpg" alt="profile logo" class="w-20 h-24 rounded-full mb-4 mx-auto">
+    <h1 class="text-2xl font-bold mb-2">Vikrant</h1>
+    <h3 class=" mt-2 text-sm"></h3>
+    <button class="text-md mt-2 bg-blue-400 text-white px-8 py-2 rounded-full">Add Friend</button>
+</div>
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+
+<script>
+    //=============setTimeout&setInterval============
+    //setTimeout delay
+    //setInterval controlled loop
+   let btn = document.getElementsByTagName("button")[0]; 
+   let h3 = document.getElementsByTagName("h3")[0];     
+   let check = 0;
+
+   btn.addEventListener('click', function() {
+        if(check == 0) {
+        h3.style.color='gold';
+        h3.textContent = 'Request Sending ...';
+        setTimeout(() => {
+        h3.style.color='green';
+        h3.textContent = 'Friend';
+        btn.textContent = 'Remove Friend';
+              check = 1;
+            }, 3000);
+     } else {
+        h3.textContent = 'Stranger';
+        h3.style.color='red';
+        btn.textContent = 'Add Friend';
+        check = 0;
+     }
+   });
+</script>
+
+</body>
+</html>

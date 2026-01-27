@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>event bubbling</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative min-h-screen bg-black text-white flex justify-evenly items-center">
+    
+    <!-- ### Loops vs Iterators in JavaScript
+    
+    **1. Loops (do NOT return anything automatically)**
+    
+    * Examples: `for`, `for…of`, `while`, `do…while`, `.forEach()`
+    * Behavior: They just run a block of code for each item.
+    * If you want a result from the loop, you must **store it manually** in a variable.
+    * Your code with `forEach` + `sum += …` is doing exactly this — manual storage.
+    
+    **2. Iterators (return something automatically)**
+    
+    * Examples: `.map()`, `.filter()`, `.reduce()`, `.some()`, `.every()`, `.find()`
+    * Behavior: They automatically produce a new value, array, or boolean.
+    * No manual storage is needed; you can use the returned value directly.
+    
+    **Key Takeaways:**
+    
+    1. Loops → manual storage if you want a result.
+    2. Iterators → automatic return, ready to use.
+    3. Your code looks like it “returns” inside the loop, but that’s actually **manual storage** in `sum`.
+    
+    --- -->
+<!--     
+  Parent catches child events by default (bubbling). Capturing is rarely used. Stop propagation must be applied per element unless you use delegation. -->
+
+
+  
+  ---
+<!--   
+  ### **Event Delegation & stopPropagation – Short Summary**
+  
+  * **Event Delegation:** Put **one listener on parent** to handle all children clicks. ✅
+  * **stopPropagation():** Stops the event from going up.
+  
+    * Apply on **child** → stops parent from knowing → delegation breaks.
+    * Apply on **parent** → stops event going higher → delegation still works.
+  * **Industry tip:** Always apply **stopPropagation** on the element you want to isolate.
+  
+  . -->
+  <!-- Event bubbling by default && event capturing applies after event listener handler on parent after it add true inside it
+   element.addEventListener("click", handler, true); // capturing
+   -->
+  
+    
+
+  <script>
+    const freelancerCards = [
+      {
+        name: "Wade Wilson",
+        role: "UI/UX designer",
+        rate: 55,
+        availability: "available",
+        company: "Epic Coders",
+        mainSkills: ["UI", "UX", "Photoshop"],
+      img:'sukuna.jpg',
+      alt:"sukuna",
+        description: "Wade is a 32 year old UI/UX designer, with an impressive portfolio behind him."
+      },
+      {
+        name: "Natasha Romanoff",
+        role: "UI/UX & Brand Designer",
+        rate: 68,
+        availability: "Not available",
+        company: "Red Room Creative",
+        mainSkills: ["UI", "UX", "Figma"],
+        img:'gojo.jpg',
+        alt:'gojo',
+        description: "Natasha is a 34 year old senior designer known for elegant and high-conversion interfaces."
+      },
+      {
+        name: "Bruce Banner",
+        role: "UX Researcher & Designer",
+        rate: 75,
+        img:'deadpool.jpg',
+        alt:'deadpool',
+        availability: "busy this week",
+        company: "Calm Interfaces Lab",
+        mainSkills: ["UX", "User Research", "Figma"],
+        description: "Bruce is a 39 year old UX specialist who turns complex problems into simple, calm experiences."
+      }
+    ];
+   //===================Point=============================
+   //   Template literals inside  need a value or string, loops like for/forEach don’t return anything, so they can’t go directly inside.
+     
+   //   Normal loops can be used outside to build a string, then insert it into the template literal.
+     
+   //   .map() returns an array, and .join('') converts that array into a single string to use inside the template literal.
+   
+   
+   
+           //with  arrow must return manually or does not close them in braces inside it
+
+
+    let body=document.querySelector('body');
+    let sum=''
+    freelancerCards.forEach((ele,index)=>{
+       sum+=`  <div class="card  w-96 h-auto p-4 rounded-2xl shadow-2xl bg-white ">
+        <div class="timing flex justify-between">
+           <button class="text-white bg-green-500 px-4 py-1 rounded-full text-sm font-semibold">${ele.availability}</button>
+           <h3 class="text-black text-bold text-md">$${ele.rate}/hr</h3>
+        </div>
+        
+        <div class="data flex  flex-col items-center mt-4 mb-2">
+            <img src="${ele.img}" alt="${ele.alt}" class="w-24 h-24 rounded-full">
+            <h2 class="mt-3 mb-1 text-2xl text-blue-500 text-bold">${ele.name}</h2>
+            <p class="text-sm text-gray-600 mb-1">${ele.role}</p>
+            <h5 class="text-blue-500 text-semibold">${ele.company}</h5>
+        </div>
+        <div class="skills">
+            <ul class="flex justify-evenly gap-3">
+
+
+
+    
+               ${ele.mainSkills.map(skill => {
+                 return `<li class="bg-gray-100 text-black text-bold px-6 py-1 text-md rounded-full">${skill}</li>`;
+               }).join('')}
+               
+                
+            </ul>
+          
+        </div>
+        <div class="detail mt-4 text-center">
+            <p class="text-gray-600 text-sm">
+                ${ele.description}
+            </p>
+        </div>
+        <div class="order ">
+    
+        </div>
+        <div class="order-btn mt-2">
+           <button class="w-full text-white bg-green-500 px-8 py-2 rounded-full text-md font-semibold mx-aut">Order</button>
+        </div>
+    </div>`
+    })
+   
+
+    body.innerHTML=sum
+
+    // body.addEventListener('click',(e)=>{
+    // console.log("target:", e.target);         
+    //   console.log("currentTarget:", e.currentTarget);
+    // })
+    
+    //   body.addEventListener('click',(e)=>{
+    //   console.log("target:", e.target);         
+    //     console.log("currentTarget:", e.currentTarget);
+    //   },true);
+   
+  </script>
+
+</body>
+</html>

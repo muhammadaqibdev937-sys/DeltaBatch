@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    
+   <h1>Hello world</h1>
+
+    
+    
+    <h2></h2>
+    <script>
+        //Four Pillars of DOM:
+        //1.Select element
+        //2.change element
+        //3.change style
+        //4.addEvent Listener
+
+        //selecting elements
+        //1. document.getElementById()
+        //2. document.getElementsByClassName() //returns html collection of matching element
+        //3. document.getElementsByTagName()   //returns html collection of matching element
+        //4. document.querySelector()   
+        //5. document.querySelectorAll()  when we want to select multiples items it returns a nodeList like array
+
+
+        //Changing element
+        // 1.innerHTML
+        // 2.innerText
+        // 3.textContent
+        
+        //innerHTML: HTML tags samajhta hai aur render karta hai.
+        //innerText: sirf screen par visible text dikhata/leta hai.
+        //textContent: sab text (visible + hidden) dikhata/leta hai, HTML ko text hi samajhta hai.
+
+        //on event listener we also write function above and call it in event listener but carefully does not write braces in event listener it auto calls it soo we does not write braces in t.we write without it
+        
+        let h1=document.querySelector("h1");
+        let body=document.querySelector("body");
+        h1.innerHTML='vartamaan ankooo ka dhoka hai'
+        body.style.backgroundColor="black"
+        body.style.color='white'
+        h1.addEventListener('click',()=>{
+            h1.innerHTML="h1 clicked"
+        });
+         let h2=document.querySelector("h2");
+        // h2.innerHTML=`<h2>hello <!-- hi --></h2>`
+        // h2.innerText=`<h2>hello <!-- hi --></h2>`
+        // h2.textContent=`<h2>hello <!-- hi --></h2>`
+        //
+    </script>
+</body>
+</html>

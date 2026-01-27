@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="relative min-h-screen flex items-center justify-center bg-black text-white flex-col">
+
+   <div class="bg-gray-900 p-12 rounded-md">
+      <h1 class="text-2xl font-bold mb-4">Who wil the winner of PSL???</h1>
+      <h2 class="text-2xl text-center bg-white text-blue-500  mt-6 mb-6">***</h2>
+      <button class="bg-blue-500 text-white ml-10 mt-2 px-16 py-16 pt-2 pb-2 text-md rounded-full">Guess The Winner</button>
+   </div>
+
+
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+
+    <script>
+            //with  array
+        // let team=["csk","lq","ms","kk","qk","dc"];
+        // let input=document.querySelector("h2");
+        // let btn=document.querySelector("button")
+        // btn.addEventListener('click',()=>{
+        //     let randomTeamIndex=Math.floor(Math.random()*team.length);
+        //     input.textContent=team[randomTeamIndex]
+        //     console.log(randomTeamIndex);
+        // })
+
+
+
+
+
+            //with array of objects
+        let teams=[
+            {
+          team:"csk",
+          primary:'yellow',
+          secondary:"blue"
+        },
+        {
+    team:"rcb",
+        primary:'red',
+        secondary:"black"
+        },
+        {
+        team:"kk",
+            primary:'orange',
+            secondary:"green"
+        }]
+            let input=document.querySelector("h2");
+            let btn=document.querySelector("button")
+            btn.addEventListener('click',()=>{
+                let randomTeamIndex=Math.floor(Math.random()*teams.length);
+                input.textContent=teams[randomTeamIndex].team;
+                console.log(teams[randomTeamIndex].team);
+                input.style.backgroundColor=teams[randomTeamIndex].primary;
+                console.log(teams[randomTeamIndex].primary);
+                input.style.color=teams[randomTeamIndex].secondary;
+                console.log(teams[randomTeamIndex].secondary);
+            })
+
+             
+
+
+
+            //check as we array of objects 
+            //we also create objects of array 
+            //how we extract data from both cases
+
+    </script>
+
+</body>
+</html>

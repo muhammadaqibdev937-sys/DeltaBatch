@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="relative min-h-screen flex items-center justify-center bg-black text-white">
+   <div class="flex items-center gap-20">
+    <img src="lion.webp" alt="lion" class="w-96 h-64 lion" >
+    <button class="bg-blue-600 text-white text-xl pl-14 pr-14 pt-3 pb-3 rounded-full active:scale-95 transition-transform duration-150">Image swap</button>
+    <img src="bear.avif" alt="bear" class="w-96 h-64 bear">
+   </div>
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+<script>
+      let img1=document.querySelector('.lion')
+      let img2=document.querySelector('.bear')
+      let btn=document.querySelector('button');
+      btn.addEventListener('click',function(){
+        let attr1=img1.getAttribute('src');
+        let attr2=img2.getAttribute('src')
+         img1.setAttribute('src',attr2);
+         img2.setAttribute('src',attr1);
+      })
+</script>
+
+</body>
+</html>

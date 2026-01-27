@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Cursor</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<!-- check why cursor image not show -->
+  <style>
+    .dot, .circle {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    body{
+            margin: 0;
+            min-height: 100vh;
+            background: black;
+            color: white;
+            cursor: url('cursor.png') 16 16, auto !important;
+    }
+  </style>
+</head>
+
+<body class="relative min-h-screen bg-black">
+
+
+  <div class="dot w-2 h-2 bg-white rounded-full z-20 "></div>
+
+  <div class="circle w-10 h-10 border-2 border-blue-500 rounded-full z-10"></div>
+
+  <script>
+    const dot = document.querySelector('.dot');
+    const circle = document.querySelector('.circle');
+     
+    //creating dot and circle mouse follower
+    //circle should behind arrow
+    //dets means detail client x and client y track mouse and simple use transform on it
+    //simple subtract mouse x value from circle x and we want  only 12 percent of it because it is smooth and recommended and simple request animation frame to call it perfectly again and older way is using setInterval
+    let mouseX = 0, mouseY = 0;
+    let circleX = 0, circleY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      dot.style.transform = `translate(${mouseX-2}px, ${mouseY-2}px)`;
+    });
+
+    function animate()
+    {
+        circleX+=(mouseX-circleX)*0.12;
+        circleY+=(mouseY-circleY)*0.12;
+        circle.style.transform = `translate(${circleX-20}px, ${circleY-20}px)`;
+        requestAnimationFrame(animate)
+    }
+    animate()
+
+   
+  </script>
+
+</body>
+</html>

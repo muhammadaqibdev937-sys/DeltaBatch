@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Flowbite CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="relative min-h-screen flex items-center justify-center bg-black text-white flex-col">
+
+    
+
+   <div class="bg-white w-64 h-64 rounded-[8px] box">
+    
+   </div>
+   <button class="bg-blue-500 text-white px-8 py-8 pt-2 pb-2 rounded-full mt-4 ">Change Color</button>
+
+
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.4.1/flowbite.min.js"></script>
+
+<script>
+    // ===========================Math.Random=============================
+    //it gives value between 0 to 1 
+    //values does not came 1
+    //=====================one method=======================
+    //   let box=document.querySelector(".box");
+    //   let btn=document.querySelector("button");
+    //   btn.addEventListener("click",()=>{
+    //     let v1=Math.floor((Math.random()*256)+1);
+    //     let v2=Math.floor((Math.random()*256)+1);
+    //     let v3=Math.floor((Math.random()*256)+1)
+       
+    //     box.style.backgroundColor=`rgb(${v1} ${v2} ${v3})`
+    //   })
+      
+
+
+    //===========================second method===============================
+    let box=document.querySelector(".box");
+  let btn=document.querySelector("button");
+  btn.addEventListener('click',function(){
+    // direct pass  hash here and it concat
+    let randomValue="";
+    for(let i=0;i<=5;i++)
+  {
+     randomValue+=Math.floor(Math.random()*10)
+  }
+  //or separate doo concatenation
+  let hash="#";
+  hash+=randomValue;
+  console.log(hash);
+
+//   box.style.backgroundColor=`${randomValue}`
+box.style.backgroundColor=`${hash}`
+  })
+
+  
+</script>
+
+</body>
+</html>

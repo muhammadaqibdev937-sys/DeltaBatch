@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+   
+</head>
+<body class="relative min-h-screen flex items-center justify-center bg-black">
+  
+   <div class="w-60 h-60 bg-white  rounded-sm box">
+  
+   </div>
+
+<script>
+
+    //Events
+    //mouseenter
+    //mouseleave
+    //mousemove
+    //keyup    these are applied on doc not element
+    //keydown         these are applied on doc not element     ====================>>>check also
+    //keypress    these are applied on doc not element
+    //click
+    //dblclick
+
+
+
+    //============>>>check
+    //scroll
+    //wheel
+    let box=document.querySelector('.box')
+    box.addEventListener('mouseenter',function(){
+        console.log("event performed");
+    });
+
+    box.addEventListener('mouseleave',function(){
+            console.log("event performed");
+        });
+        box.addEventListener('mousemove',function(){
+                console.log("mouse move");
+            });
+  
+        box.addEventListener('click',function(){
+                console.log("event performed");
+            });
+            box.addEventListener('dblclick',function(){
+                    console.log("event performed");
+                })
+            document.addEventListener('keyup',function(){
+                    console.log("event  up performed");
+                })
+                document.addEventListener('keydown',function(){
+                        console.log("event down")})
+
+
+</script>
+
+</body>
+</html>

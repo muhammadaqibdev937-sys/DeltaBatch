@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="relative min-h-screen flex items-center justify-center bg-black text-white">
+  
+    <button class="bg-blue-800  text-white text-xl px-8 py-2 rounded-full z-10">Create Element</button>
+
+<script>
+
+    //Events
+    //mouseenter
+    //mouseleave
+    //keyboardUp
+    //keyboardDown
+    
+   let btn=document.querySelector("button");
+   
+   btn.addEventListener('click',function () {
+    let left=Math.floor(Math.random()*70);
+    let right=Math.floor(Math.random()*70);
+    let top=Math.floor(Math.random()*70);
+    let bottom=Math.floor(Math.random()*70)
+    let img=document.createElement('img');
+
+
+    img.style.width='200px';
+    img.style.height='200px';
+      img.style.left=left+'%';
+      img.style.right=right+'%';
+      img.style.top=top+'%';
+      img.style.bottom=bottom+'%';
+
+    img.style.position='absolute'
+    img.setAttribute('src','chutki.png');
+    document.querySelector('body').appendChild(img)
+   })
+</script>
+
+</body>
+</html>
