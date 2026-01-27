@@ -11,7 +11,7 @@
 
 
 
-## **1. Todo List App **
+## . Todo List App 
 
 **Concepts Covered:**
 
@@ -118,6 +118,7 @@
 
 * Parallax effect for images or sections
 * Reveal elements only when they come into view
+
 
 
 ---
