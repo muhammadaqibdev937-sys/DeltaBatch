@@ -11,7 +11,7 @@
 
 
 
-## **1. Todo List App **
+## 1. Todo List App 
 
 **Concepts Covered:**
 
@@ -120,4 +120,6 @@
 * Reveal elements only when they come into view
 
 
+
 ---
+
