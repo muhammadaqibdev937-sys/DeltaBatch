@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6 justify-center ">
+
+
+  <h1 class="text-3xl font-bold mb-6 text-gray-800">GitHub Finder</h1>
+
+  <div class="flex mb-6 w-full max-w-md">
+    <input type="text" placeholder="Enter GitHub Username" 
+           class="flex-1 p-3 rounded-l-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 input" />
+    <button class="bg-blue-500 text-white px-5 rounded-r-md hover:bg-blue-600 transition">
+      Search
+    </button>
+  </div>
+
+  <div class="w-full max-w-md bg-white shadow-md rounded-lg p-6 hidden" id="userCard">
+    <div class="flex items-center mb-4">
+      <!-- User Avatar -->
+      <img  src="" alt="Avatar" class="w-20 h-20 rounded-full mr-4" id="avatar">
+      <!-- User Info -->
+      <div>
+        <h2 class="text-xl font-bold text-gray-800" id="name">User Name</h2>
+        <p class="text-gray-600" id="username">@username</p>
+      </div>
+    </div>
+
+    <!-- Other Info -->
+    <div class="flex justify-between text-gray-700 mt-4">
+      <div class="text-center">
+        <p class="font-bold" id="repos">0</p>
+        <p class="text-sm">Repositories</p>
+      </div>
+      <div class="text-center">
+        <p class="font-bold" id="followers">0</p>
+        <p class="text-sm">Followers</p>
+      </div>
+      <div class="text-center">
+        <p class="font-bold" id="following">0</p>
+        <p class="text-sm l">Following</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    let btn=document.querySelector('button');
+     let input=document.querySelector('.input');
+     let img=document.querySelector('img');
+     let name=document.getElementById('name');
+     let nickname=document.getElementById('username');
+     let repos =document.getElementById('repos')
+     let followers =document.getElementById('followers');
+     let following=document.getElementById('following');
+    let userCard=document.getElementById('userCard')
+   async function finder(username) {
+    const data=await fetch(`https://api.github.com/users/${username}`)
+    const userData=await data.json();
+    console.log(userData);
+    console.log(userData.login);
+  
+    img.setAttribute('src',userData.avatar_url)
+    name.textContent=userData.name
+    nickname.textContent='@'+userData.login
+    repos.textContent=userData.public_repos
+    followers.textContent=userData.followers
+    following.textContent=userData.following
+   }
+    btn.addEventListener('click',async()=>{
+
+       let username=input.value.trim();
+    //    console.log(username);
+
+    finder(username);
+    setTimeout(function(){
+      userCard.style.display='block'
+    },2000)
+   
+
+    })  
+    
+  </script>
+</body>
+</html>

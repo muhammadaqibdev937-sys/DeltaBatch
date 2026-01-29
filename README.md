@@ -217,6 +217,10 @@
 ### If statement:
 ![alt text](images/if.png)
 
+
+### DOM Navigation
+![alt text](images/nav.png)
+
 # React :🚀
 
 ## 📋 What You'll Learn Here

@@ -1,0 +1,97 @@
+<!-- weather api key -->
+<!-- 0d0947485af54a44bce104318262801 -->
+ <!-- `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}` -->
+
+<!-- units=metric → temperature in Celsius -->
+ <!-- units=imperial → temperature in Fahrenheit -->
+ <!-- If you don’t use units=metric or units=imperial, the default temperature from API is Kelvin. -->
+<!-- 
+Geolocation Api:
+navigator.geolocation → checks if browser supports geolocation
+getCurrentPosition() → shows current lat/lon once
+watchPosition() → starts continuous tracking, updates every time location changes
+clearWatch() → stops the tracking
+
+coords object → gives latitude, longitude, accuracy, etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather • Modern UI</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+</head>
+<body class="bg-gray-900 flex items-center justify-center mt-16 font-sans text-white px-4">
+
+  <!-- Weather Card -->
+  <div class="w-full max-w-md bg-gray-800/70 backdrop-blur-md rounded-3xl shadow-2xl h-[80vh]">
+
+    <!-- Header -->
+    <div class="text-center py-3 border-b border-gray-700">
+      <h1 class="text-3xl font-extrabold text-blue-400">
+        WeatherPro
+      </h1>
+    </div>
+
+
+    
+
+    <!-- Weather Result -->
+    <div id="result" class=" p-5">
+
+      <!-- City & Weather -->
+      <div class="text-center mb-3">
+        <h2 id="city" class="text-2xl font-bold mb-1">Karachi, PK</h2>
+        <p id="desc" class="text-gray-300 text-base capitalize mb-1">Clear Sky</p>
+      </div>
+
+      <!-- Temperature -->
+      <div class="flex flex-col items-center mb-8">
+        <div id="icon" class="text-5xl mb-2 mt-1 drop-shadow-lg">☀️</div>
+        <p id="temp" class="text-3xl font-extrabold  mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-yellow-400 to-red-400 mb-1">
+          32<span class="text-3xl">°C</span>
+        </p>
+        <p class="text-gray-400 mt-1 text-base">Feels like <span id="feels" class="font-semibold text-white">34°C</span></p>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2  gap-2 ">
+        <div class="bg-gray-900/50 rounded-2xl p-4 border border-gray-700 text-center hover:scale-105 transition-transform duration-300 shadow-md">
+          <i class="fas fa-tint text-3xl text-blue-400 mb-2"></i>
+          <p id="humidity" class="text-2xl font-bold">65<span class="text-lg">%</span></p>
+          <p class="text-gray-400 mt-1 text-xs">Humidity</p>
+        </div>
+
+        <div class="bg-gray-900/50 rounded-2xl p-4 border border-gray-700 text-center hover:scale-105 transition-transform duration-300 shadow-md">
+          <i class="fas fa-wind text-3xl text-yellow-400 mb-2"></i>
+          <p id="wind" class="text-2xl font-bold">18<span class="text-lg"> km/h</span></p>
+          <p class="text-gray-400 mt-1 text-xs">Wind</p>
+        </div>
+
+        <div class="bg-gray-900/50 rounded-2xl p-4 border border-gray-700 text-center col-span-2 hover:scale-105 transition-transform duration-300 shadow-md">
+          <i class="fas fa-sun text-3xl text-red-400 mb-2"></i>
+          <p id="sun" class="text-sm font-semibold">Sunrise 6:28 AM • Sunset 6:05 PM</p>
+          <p class="text-gray-400 mt-1 text-xs">Daylight • UV moderate</p>
+        </div>
+      </div>
+
+    </div>
+
+   
+
+  </div>
+
+  <!-- JS -->
+  <script>
+   
+  </script>
+
+</body>
+</html>
+
